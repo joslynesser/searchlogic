@@ -149,7 +149,7 @@ module Searchlogic
                 scope
               end
             elsif arity == -1
-              scope.send(scope_name, *(value.is_a?(Array) ? value : [value]))
+              scope.send(scope_name, *[value])
             else
               scope.send(scope_name, value)
             end
